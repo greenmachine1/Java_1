@@ -81,22 +81,21 @@ public class MainActivity extends Activity {
 	       
 	       // initializing some variables
 	       int firstNumber = 99;
-	       int secondNumber = 12;
 			
 	       boolean yesOrNo = true;
 	       String temporaryString = "";
 			
-	       if(firstNumber == 100)
+	       if((firstNumber == 100) && (yesOrNo == true))
 	       {
 	    	   temporaryString = "It is equal to 100";
 	    	   outToString(temporaryString);
 	       }
-	       else if (firstNumber < 100)
+	       else if ((firstNumber < 100) && (yesOrNo == true))
 	       {
 	    	   temporaryString = "It is less than 100";
 	    	   outToString(temporaryString);
 	       }
-	       else if (firstNumber > 100)
+	       else if ((firstNumber > 100) && (yesOrNo == true))
 	       {
 	    	   temporaryString = "It is more than 100";
 	    	   outToString(temporaryString);
@@ -107,6 +106,8 @@ public class MainActivity extends Activity {
 	       setContentView(linLayout);
 
 	}
+	
+	 // Function used to output a string to the linear layout 
 	 public void outToString(String passedInString) {
   	   		TextView newTextView = new TextView(this);
   	   		newTextView.setText(passedInString);
