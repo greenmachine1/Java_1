@@ -46,7 +46,12 @@ public class MainActivity extends Activity {
 	       
 	       // making a EditText place for entering your name
 	       editText = new EditText(this);
-	       editText.setHint("Enter your name here");
+	       
+	       editText.setHint(R.string.your_name_here);
+	       
+	       //editText.setHint("Enter your name here");
+	       
+	       //editText.setHint("Enter your name here");
 	       
 	       temporaryName = editText.getText();
 	       
@@ -74,37 +79,7 @@ public class MainActivity extends Activity {
 
 	       // adding the button to my subview
 	       linLayout.addView(b);
-	       
-	       TextView ageText = new TextView(this);
-	       ageText.setText("please enter in your age");
-	       
-	       linLayout.addView(ageText);
-	       
-	       // creating an editable view for the age.
-	       ageOfPerson = new EditText(this);
-	       ageOfPerson.setHint("Enter in your age");
-	       
-	       // adding it to my subview
-	       linLayout.addView(ageOfPerson);
-	       
-	       // creating a button for entering your name
-	       Button ageButton = new Button(this);
-	       ageButton.setText("Enter your age.");
-	       ageButton.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				
-				// upon clicking this button, the persons name will
-				// appear
-				personsAge = 
-				
-			}
-		});
-	       
-	       
-	       
-	       
+	      
 	       
 	       // sending the linLayout to the main view
 	       setContentView(linLayout);

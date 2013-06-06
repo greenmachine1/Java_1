@@ -3,6 +3,7 @@
 
     <string name="app_name">Week_1_Project</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Hello_World</string>
+	<string name="your_name_here">Your name Here Sir</string>
 
 </resources>
