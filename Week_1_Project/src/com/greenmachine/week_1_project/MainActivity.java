@@ -26,6 +26,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+		
 
 	       // setting our linear layout 
 	       linLayout = new LinearLayout(this);
@@ -42,16 +43,13 @@ public class MainActivity extends Activity {
 	       // adding it to my subview
 	       linLayout.addView(newTextView);
 	       	       
-	       
-	       
+	      
 	       // making a EditText place for entering your name
 	       editText = new EditText(this);
-	       
+
+	       // made it so that it pulls from the string resource value
 	       editText.setHint(R.string.your_name_here);
-	       
-	       //editText.setHint("Enter your name here");
-	       
-	       //editText.setHint("Enter your name here");
+
 	       
 	       temporaryName = editText.getText();
 	       
@@ -79,6 +77,26 @@ public class MainActivity extends Activity {
 
 	       // adding the button to my subview
 	       linLayout.addView(b);
+	       
+	       
+	       // initializing some variables
+	       int firstNumber = 100;
+	       int secondNumber = 12;
+			
+	       boolean yesOrNo = true;
+			
+	       if(firstNumber == 100)
+	       {
+	    	   
+	       }
+	       else if (firstNumber < 100)
+	       {
+	    	   
+	       }
+	       else if (firstNumber > 100)
+	       {
+	    	   
+	       }
 	      
 	       
 	       // sending the linLayout to the main view
