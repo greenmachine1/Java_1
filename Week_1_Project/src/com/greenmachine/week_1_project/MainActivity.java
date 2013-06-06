@@ -18,12 +18,14 @@ public class MainActivity extends Activity {
 	EditText editText;
 	TextView nameOfPerson;
 	Editable temporaryName;
+	EditText ageOfPerson;
+	
+	int personsAge;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-				
 
 	       // setting our linear layout 
 	       linLayout = new LinearLayout(this);
@@ -54,7 +56,6 @@ public class MainActivity extends Activity {
 	       nameOfPerson = new TextView(this);
 	       nameOfPerson.setText("");
 	       
-	       
 	       // creating a button for entering your name
 	       Button b = new Button(this);
 	       b.setText("Enter your name.");
@@ -62,23 +63,44 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// do something inside here
-				if(editText != null)
-				{
-					nameOfPerson.setText(temporaryName);
-				}
-				else
-				{
-					nameOfPerson.setText(temporaryName);
-				}
-			
+				
+				// upon clicking this button, the persons name will
+				// appear
+				nameOfPerson.setText(temporaryName);
 			}
 		});
+	       
 	       linLayout.addView(nameOfPerson);
-	       
-	       
+
 	       // adding the button to my subview
 	       linLayout.addView(b);
+	       
+	       TextView ageText = new TextView(this);
+	       ageText.setText("please enter in your age");
+	       
+	       linLayout.addView(ageText);
+	       
+	       // creating an editable view for the age.
+	       ageOfPerson = new EditText(this);
+	       ageOfPerson.setHint("Enter in your age");
+	       
+	       // adding it to my subview
+	       linLayout.addView(ageOfPerson);
+	       
+	       // creating a button for entering your name
+	       Button ageButton = new Button(this);
+	       ageButton.setText("Enter your age.");
+	       ageButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				// upon clicking this button, the persons name will
+				// appear
+				personsAge = 
+				
+			}
+		});
 	       
 	       
 	       
