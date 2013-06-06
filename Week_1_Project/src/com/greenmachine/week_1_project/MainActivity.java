@@ -80,30 +80,39 @@ public class MainActivity extends Activity {
 	       
 	       
 	       // initializing some variables
-	       int firstNumber = 100;
+	       int firstNumber = 99;
 	       int secondNumber = 12;
 			
 	       boolean yesOrNo = true;
+	       String temporaryString = "";
 			
 	       if(firstNumber == 100)
 	       {
-	    	   
+	    	   temporaryString = "It is equal to 100";
+	    	   outToString(temporaryString);
 	       }
 	       else if (firstNumber < 100)
 	       {
-	    	   
+	    	   temporaryString = "It is less than 100";
+	    	   outToString(temporaryString);
 	       }
 	       else if (firstNumber > 100)
 	       {
-	    	   
+	    	   temporaryString = "It is more than 100";
+	    	   outToString(temporaryString);
 	       }
 	      
 	       
 	       // sending the linLayout to the main view
 	       setContentView(linLayout);
-	       
-	       
+
 	}
+	 public void outToString(String passedInString) {
+  	   		TextView newTextView = new TextView(this);
+  	   		newTextView.setText(passedInString);
+  	   		
+  	   		linLayout.addView(newTextView);
+     }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
