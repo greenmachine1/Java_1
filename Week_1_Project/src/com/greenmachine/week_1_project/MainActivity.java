@@ -1,10 +1,9 @@
+
 package com.greenmachine.week_1_project;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.graphics.LinearGradient;
 import android.view.Menu;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -12,7 +11,6 @@ public class MainActivity extends Activity {
 
 	LinearLayout linLayout;
 	LinearLayout.LayoutParams layParams;
-	EditText eText;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +23,19 @@ public class MainActivity extends Activity {
 	       linLayout.setOrientation(LinearLayout.VERTICAL);
 	       layParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 	       linLayout.setLayoutParams(layParams);
-	        
+
+	       // creating a text view
+	       TextView newTextView = new TextView(this);
+	       newTextView.setText("Text to be displayed on the screen.");
+	       
+	       // adding it to my subview
+	       linLayout.addView(newTextView);
+	       
+	       
+	       // sending the linLayout to the main view
+	       setContentView(linLayout);
+	       
+	       
 	       /*
 	       // created a new TextView
 	       TextView tv = new TextView(this); 
@@ -89,9 +99,8 @@ public class MainActivity extends Activity {
 	       
 	       result = new TextView(this);
 	       ll.addView(result);
-	       
-	       setContentView(ll);
-		*/
+	    */   
+
 	}
 
 	@Override
