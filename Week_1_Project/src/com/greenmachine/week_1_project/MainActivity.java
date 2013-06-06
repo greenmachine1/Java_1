@@ -15,6 +15,7 @@ public class MainActivity extends Activity {
 	LinearLayout linLayout;
 	LinearLayout.LayoutParams layParams;
 	EditText editText;
+	TextView nameOfPerson;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,9 @@ public class MainActivity extends Activity {
 	       // adding it to my subview
 	       linLayout.addView(editText);
 	       
+	       nameOfPerson = new TextView(this);
+	       
+	       
 	       // creating a button for entering your name
 	       Button b = new Button(this);
 	       b.setText("Enter your name.");
@@ -50,10 +54,22 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// do something inside here
+				if(editText != null)
+				{
+					nameOfPerson.setText("yes");
+				}
+				else
+				{
+					nameOfPerson.setText("no");
+				}
 			
 			}
 		});
-
+	       linLayout.addView(nameOfPerson);
+	       
+	       
+	       // adding the button to my subview
+	       linLayout.addView(b);
 	       
 	       
 	       
