@@ -3,6 +3,7 @@ package com.greenmachine.week_1_project;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.text.Editable;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ public class MainActivity extends Activity {
 	LinearLayout.LayoutParams layParams;
 	EditText editText;
 	TextView nameOfPerson;
+	Editable temporaryName;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,8 @@ public class MainActivity extends Activity {
 	       layParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 	       linLayout.setLayoutParams(layParams);
 
+	       
+	       
 	       // creating a text view
 	       TextView newTextView = new TextView(this);
 	       newTextView.setText("Enter in your name:");
@@ -36,14 +40,19 @@ public class MainActivity extends Activity {
 	       // adding it to my subview
 	       linLayout.addView(newTextView);
 	       	       
+	       
+	       
 	       // making a EditText place for entering your name
 	       editText = new EditText(this);
 	       editText.setHint("Enter your name here");
+	       
+	       temporaryName = editText.getText();
 	       
 	       // adding it to my subview
 	       linLayout.addView(editText);
 	       
 	       nameOfPerson = new TextView(this);
+	       nameOfPerson.setText("");
 	       
 	       
 	       // creating a button for entering your name
@@ -56,11 +65,11 @@ public class MainActivity extends Activity {
 				// do something inside here
 				if(editText != null)
 				{
-					nameOfPerson.setText("yes");
+					nameOfPerson.setText(temporaryName);
 				}
 				else
 				{
-					nameOfPerson.setText("no");
+					nameOfPerson.setText(temporaryName);
 				}
 			
 			}
