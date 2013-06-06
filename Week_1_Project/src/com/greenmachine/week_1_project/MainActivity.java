@@ -2,27 +2,96 @@ package com.greenmachine.week_1_project;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.graphics.LinearGradient;
 import android.view.Menu;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
+	LinearLayout linLayout;
+	LinearLayout.LayoutParams layParams;
+	EditText eText;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+	       // setting our linear layout 
+	       linLayout = new LinearLayout(this);
+	       linLayout.setOrientation(LinearLayout.VERTICAL);
+	       layParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+	       linLayout.setLayoutParams(layParams);
+	        
+	       /*
+	       // created a new TextView
+	       TextView tv = new TextView(this); 
+	       
+	       // set the TextView(tv) text to "this is an example textview"
+	       //tv.setText(getString(R.string.quarter)+","+getString(R.string.nickel)+ "," +getString(R.string.penny));
+	       tv.setText("Convert Dollars to Coins");
+	       
+	       // adding it to my main layout
+	       ll.addView(tv);
+	       
+	       et = new EditText(this);
+	       et.setHint("Enter Dollars");
+	       //ll.addView(et);
+
+	              
+	       Button b = new Button(this);
+	       b.setText("Convert");
+	       //ll.addView(b);
+	       b.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				// gets the integer value back from quarter
+				int quarter = getResources().getInteger(R.integer.quarter);
+				int dime = getResources().getInteger(R.integer.dime);
+				int nickel = getResources().getInteger(R.integer.nickel);
+				int penny = getResources().getInteger(R.integer.penny);
+				
+				
+				int entry = Integer.parseInt(et.getText().toString());
+				
+				int numQ = (100 / quarter)*entry;
+				int numD = (100 / dime)*entry;
+				int numN = (100 / nickel)*entry;
+				int numP = (100 / penny)*entry;
+				
+				result.setText("Quarter: " + numQ + "\r\n" +
+								"Dime" + numD + "\r\n" + 
+								"Nickel" + numN + "\r\n" + 
+								"Penny: " + numP + "\r\n");
+				
+				for(int i = 0; i < 5; i++)
+				{
+					result.setText("This " + i);
+				}
+			}
+		});
+	       
+	       
+	       LinearLayout form = new LinearLayout(this);
+	       form.setOrientation(LinearLayout.HORIZONTAL);
+	       lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+	       form.setLayoutParams(lp);
+	       
+	       form.addView(et);
+	       form.addView(b);
+	       
+	       ll.addView(form);
+	       
+	       result = new TextView(this);
+	       ll.addView(result);
+	       
+	       setContentView(ll);
+		*/
 	}
 
 	@Override
